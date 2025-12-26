@@ -613,7 +613,7 @@ def read_gauout_old(gauout):
     # Read string from gaussian output
     DATA_LAST = []
     DATA_WFCC = []
-    key1, key2 = "\GINC-","@"
+    key1, key2 = "\\GINC-","@"
     strings = extract_string(lines,key1,key2,accumulate=True)
     for string in strings:
         lines = "".join([line.strip() for line in string.split()])

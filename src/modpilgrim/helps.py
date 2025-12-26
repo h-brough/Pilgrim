@@ -830,7 +830,7 @@ MENU  = '''
  List of commands ($cmd) and variables ($var):
 
    ----------------------------------------------------------------
-   $cmd\$var | struc | isomass | temp | chem | path | kmc | dlevel 
+   $cmd\\$var | struc | isomass | temp | chem | path | kmc | dlevel 
    ----------------------------------------------------------------
    help      | x     | x       |  x   |  x   |  x   |  x  |  x     
    ls        | x     | x       |  x   |  x   |  x   |  x  |  x

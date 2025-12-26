@@ -50,7 +50,7 @@ used in 'get_sct_part1' and 'get_sct' functions.
 #===================================#
 import numpy        as np
 from   scipy.integrate import fixed_quad
-from   scipy.integrate import simps
+from   scipy.integrate import simpson as simps
 #-----------------------------------#
 import common.Exceptions   as Exc
 import common.fncs         as fncs
@@ -359,7 +359,7 @@ def theta_integrand(s_i,E,svals,lmueff,VadiSpl):
         return np.sqrt( 2*mu_eff* abs(E-VadiSpl(s_i)) )
     #-------------------------------------------------#
     # treat as list
-    if type(s_i) in (float,np.float64,np.float128):
+    if type(s_i) in (float,np.float64,np.longdouble):
         return  theta_integrand_float(s_i,E,svals,lmueff,VadiSpl)
     else:
         return [theta_integrand_float(x_i,E,svals,lmueff,VadiSpl) for x_i in s_i]
